@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f3f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            transition: box-shadow 0.3s;
+        }
+
+        .container:hover {
+            box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+        }
+   <!-- Add this above or below your game canvas in the HTML file -->
+<label for="gridSizeSelector">Select grid size:</label>
+<select id="gridSizeSelector">
+  <option value="2">2 x 2</option>
+  <option value="3">3 x 3</option>
+  <option value="4">4 x 4</option>
+  <option value="5">5 x 5</option>
+  <option value="6">6 x 6</option>
+  <option value="7">7 x 7</option>
+  <option value="8">8 x 8</option>
+  <option value="9">9 x 9</option>
+  <!-- Add more options up to 10 x 10 -->
+  <option value="10">10 x 10</option>
+</select>
+
+<button class="set-grid-size-button">Set Grid Size</button>
+
+        canvas#gameCanvas {
+            display: block;
+            margin: 20px auto;
+            border: 2px solid #34495e;
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            background-color: #FFD700;
+            color: #1f1f1f;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #FFA500;
+        }
+
+        .message {
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .twitter-handle {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .twitter-handle:hover {
+            background-color: #1DA1F2;
+        }
+    </style>
+    <title>Slope Battles</title>
+</head>
+<body>
+    <a href="https://twitter.com/rebin3" class="twitter-handle">@rebin3</a>
+    <div class="container">
+        <h1>Slope Battles</h1>
+        <p>Place points on the grid following the rules. Check out the <a href="instructions.html">instructions</a> for more details.</p>
+
+        <!-- Grid Size Selector -->
+        <label for="gridSizeSelector">Select grid size:</label>
+        <select id="gridSizeSelector">
+            <option value="2">2 x 2</option>
+            <option value="3">3 x 3</option>
+            <option value="4">4 x 4</option>
+             <option value="5">5 x 5</option>
+             <option value="6">6 x 6</option>
+             <option value="7">7 x 7</option>
+            <option value="8">8 x 8</option>
+             <option value="9">9 x 9</option>
+            <!-- Add more options up to 10 x 10 -->
+            <option value="10">10 x 10</option>
+        </select>
+        <!-- <button class="set-grid-size-button">Set Grid Size</button> -->
+
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div class="controls">
+            <button class="start-button">Start</button>
+            <button class="reset-button">Reset</button>
+        </div>
+        <p class="message"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

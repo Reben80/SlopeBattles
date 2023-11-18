@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1f1f1f; /* Dark background color */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+    max-width: 600px; /* Set a maximum width for larger screens */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Add a lifting shadow effect */
+    padding: 20px;
+    background-color: #2c3e50; /* Dark blue-gray background color */
+    border-radius: 10px; /* Rounded corners for aesthetics */
+    transition: box-shadow 0.3s;
+}
+
+.container:hover {
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+canvas#gameCanvas {
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #34495e; /* Darker border color for the canvas */
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    background-color: #FFD700; /* Gold color for buttons */
+    color: #1f1f1f; /* Dark text color for buttons */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FFA500; /* Darker gold color on hover */
+}
+
+.message {
+    margin-top: 20px;
+    color: #CCCCCC; /* Lighter text color for the message */
+}
+
+/* New styles for the Twitter handle link */
+.twitter-handle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for better visibility */
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #FFFFFF; /* White text color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.twitter-handle:hover {
+    background-color: #1DA1F2; /* Twitter blue color on hover */
+    color: #FFFFFF;
+}
+
+/* Illegal move animation */
+@keyframes illegalMove {
+    0% {
+        background-color: red;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+.illegal-move {
+    animation: illegalMove 0.5s ease-in-out;
+}

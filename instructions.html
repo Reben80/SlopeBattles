@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Existing styles for body, container, etc. */
+
+        /* Styles specific to the instructions */
+        .instructions {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .instructions h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 5px;
+        }
+
+        .list-numbered {
+            counter-reset: list-counter;
+        }
+
+        .list-numbered li {
+            counter-increment: list-counter;
+            margin-bottom: 10px;
+        }
+
+        .list-numbered li::before {
+            content: counter(list-counter) ". ";
+            font-weight: bold;
+            color: #FF5733;
+        }
+
+        .start-link {
+            display: inline-block;
+            background-color: #FFD700;
+            color: #1f1f1f;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .start-link:hover {
+            background-color: #FFA500;
+        }
+    </style>
+    <title>Game Instructions - Slope Battles</title>
+</head>
+<body>
+    <a href="https://twitter.com/rebin3" class="twitter-handle">@rebin3</a>
+    <div class="container">
+        <h1>Slope Battles Instructions</h1>
+        <div class="instructions">
+            <h2>Objective</h2>
+            <p>The objective of Slope Battles is to strategically place points on a grid, adhering to the game's rules, with the ultimate goal of placing as many dots as possible without violating any conditions.</p>
+
+            <h2>How to Play</h2>
+            <p>This is single player game, you try to put as much as possible dots in the grid, while doing this you try to see if there is any patterns</p>
+
+            <h2>Game Termination Conditions</h2>
+            <ol>
+                <li><strong>Placing Outside the Grid:</strong> Placing a point outside the confines of the grid immediately ends the game.</li>
+                <li><strong>Point Overlap:</strong> No two points can occupy the same grid location. Doing so will terminate the game.</li>
+                <li><strong>Row/Column Duplicates:</strong> Placing multiple points in the same row or column is not allowed and will end the game.</li>
+                <li><strong>Shared Slopes:</strong> If any two points form a line segment with a slope that matches another segment's slope, the game will end.</li>
+            </ol>
+            <p>Master these rules to become a pro at Slope Battles and place as many dots as possible!</p>
+
+            <a href="index.html" class="start-link">Start the Game</a>
+        </div>
+    </div>
+</body>
+</html>
